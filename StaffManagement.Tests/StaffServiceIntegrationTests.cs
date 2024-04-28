@@ -22,6 +22,7 @@ public class StaffServiceIntegrationTests : IClassFixture<CustomWebApplicationFa
 	}
 
 	[Fact]
+	[Trait("Category", "Integration")]
 	public async Task AddStaff_ReturnsCreatedResponse()
 	{
 		// Arrage
@@ -52,6 +53,7 @@ public class StaffServiceIntegrationTests : IClassFixture<CustomWebApplicationFa
 	}
 
 	[Fact]
+	[Trait("Category", "Integration")]
 	public async Task EditStaff_ShouldUpdateStaffRecord()
 	{
 		// Arrange
@@ -82,6 +84,7 @@ public class StaffServiceIntegrationTests : IClassFixture<CustomWebApplicationFa
 	}
 
 	[Fact]
+	[Trait("Category", "Integration")]
 	public async Task DeleteStaff_ShouldRemoveStaffRecord()
 	{
 		// Arrange
