@@ -1,0 +1,22 @@
+name: Backend Flow
+
+on: [push]
+
+jobs:
+  build:
+    name: test and build
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Test appp 
+        run: |
+          cd StaffManagement.Tests
+          dotnet test --no-build
