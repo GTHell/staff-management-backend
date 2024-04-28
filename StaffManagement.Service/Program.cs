@@ -50,7 +50,9 @@ var app = builder.Build();
 var AllowAnyOrigin = app.Configuration["AllowAnyOrigin"];
 Console.WriteLine($"AllowAnyOrigin: {AllowAnyOrigin}");
 
-if (bool.Parse(AllowAnyOrigin) == true)
+// try parse and check for true
+bool allowAnyOrigin;
+if (bool.TryParse(AllowAnyOrigin, out allowAnyOrigin) && bool.Parse(AllowAnyOrigin) == true)
 {
 	app.UseCors(AllowLocalOrigin);
 }
