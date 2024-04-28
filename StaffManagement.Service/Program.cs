@@ -48,6 +48,7 @@ var app = builder.Build();
 
 // Allow this to allow any CORS when running in CI
 var AllowAnyOrigin = app.Configuration["AllowAnyOrigin"];
+Console.WriteLine($"AllowAnyOrigin: {AllowAnyOrigin}");
 
 if (bool.Parse(AllowAnyOrigin) == true)
 {
