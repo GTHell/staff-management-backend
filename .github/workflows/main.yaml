@@ -19,4 +19,4 @@ jobs:
       - name: Test appp 
         run: |
           cd StaffManagement.Tests
-          dotnet test --no-build
+          dotnet test
