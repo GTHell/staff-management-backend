@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffManagement", "StaffManagement.csproj", "{53DB1C39-6335-48F6-B79C-AAD13A9A61D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffManagement.Tests", "..\StaffManagement.Tests\StaffManagement.Tests.csproj", "{05E0D078-8C1C-4C2E-A2CE-34517A73FCFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53DB1C39-6335-48F6-B79C-AAD13A9A61D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53DB1C39-6335-48F6-B79C-AAD13A9A61D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53DB1C39-6335-48F6-B79C-AAD13A9A61D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53DB1C39-6335-48F6-B79C-AAD13A9A61D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E0D078-8C1C-4C2E-A2CE-34517A73FCFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E0D078-8C1C-4C2E-A2CE-34517A73FCFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E0D078-8C1C-4C2E-A2CE-34517A73FCFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E0D078-8C1C-4C2E-A2CE-34517A73FCFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A35B84C2-7370-497E-AF38-AF19C1650C48}
+	EndGlobalSection
+EndGlobal
