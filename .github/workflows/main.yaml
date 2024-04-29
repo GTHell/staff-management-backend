@@ -41,5 +41,5 @@ jobs:
 
       - name: Build and push
         run: |
-          docker build . -t ghcr.io/${{ github.repository }}/staff-management-backend:latest
-          docker push ghcr.io/${{ github.repository }}/staff-management-backed:latest
+          docker build . -t ghcr.io/${{ github.repository }}:latest
+          docker push ghcr.io/${{ github.repository }}:latest
