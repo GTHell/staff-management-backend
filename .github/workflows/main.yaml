@@ -15,8 +15,12 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
+      
+      - name: Setup AllowAnyOrigin
+        run: |
+          sed -i 's/{AllowAnyOrigin}/true/g' StaffManagement.Service/appsettings.json
 
       - name: Test appp 
         run: |
           cd StaffManagement.Tests
-          dotnet test --no-build
+          dotnet test
