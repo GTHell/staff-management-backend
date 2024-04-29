@@ -25,28 +25,28 @@ jobs:
           cd StaffManagement.Tests
           dotnet test
     
-  deploy-image:
-    name: Deploy image to Github Container Registry
-    runs-on: ubuntu-22.04
+  # deploy-image:
+  #   name: Deploy image to Github Container Registry
+  #   runs-on: ubuntu-22.04
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+  #     - name: Set up Docker Buildx
+  #       uses: docker/setup-buildx-action@v1
 
-      - name: Login to GitHub Container Registry
-        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+  #     - name: Login to GitHub Container Registry
+  #       run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       
-      - name: set lower case owner name
-        run: |
-          echo "OWNER_LC=${OWNER,,}" >>${GITHUB_ENV}
-        env:
-          OWNER: '${{ github.repository_owner }}'
+  #     - name: set lower case owner name
+  #       run: |
+  #         echo "OWNER_LC=${OWNER,,}" >>${GITHUB_ENV}
+  #       env:
+  #         OWNER: '${{ github.repository_owner }}'
 
-      - name: Build and push
-        run: |
-          cd StaffManagement.Service
-          docker build . -t ghcr.io/${{ env.OWNER_LC }}/staff-management-backend:latest
-          docker push ghcr.io/${{ env.OWNER_LC }}/staff-management-backend:latest
+  #     - name: Build and push
+  #       run: |
+  #         cd StaffManagement.Service
+  #         docker build . -t ghcr.io/${{ env.OWNER_LC }}/staff-management-backend:latest
+  #         docker push ghcr.io/${{ env.OWNER_LC }}/staff-management-backend:latest
